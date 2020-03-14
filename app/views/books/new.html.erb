@@ -1,0 +1,22 @@
+<h1> Create a new book </h1>
+<table>
+	<thead>
+	 <tr>
+		<th>name</th>
+		<th>author</th>
+	 </tr>
+   </thead>
+    <tbody>
+	<% @books.each do |book|
+	  <tr>
+		<td><%= book.name %></td>
+		<td><%= book.author %></td>
+		<td><%= link_to "Show",book_path(book) %></td>
+		<td><%= link_to "Edit" ,book_path(book) %></td>
+		<td><%= link_to "destroy",method:'delete',  data: {:confirmation "are you sure"} %></td>
+	  </tr>
+	  <% end %>
+		</tbody>
+</table>
+<br>
+<%= link_to "new book" ,new_book_path %>

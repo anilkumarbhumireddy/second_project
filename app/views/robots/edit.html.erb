@@ -1,0 +1,8 @@
+<h2>Edit a robot </h2>
+<%= form_for @robot do |f| %>
+	<p>Enter Robot's new name:<%= f.text_field  :name %></p>
+	<p>Enter new favorite Phrase:<%= f.text_field :slogan %> </p>
+	
+
+	<%= f.submit %>
+<% end %>

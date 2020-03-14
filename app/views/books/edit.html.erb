@@ -1,0 +1,6 @@
+<h2> Edit a book </h2>
+<%= form_for @book do |f| %>
+<p>Book_name:<%= f.text_field  :book_name %></p>
+<p>Author:<%= f.text_field  :author %></p>
+        <%= f.submit %>
+<% end %>

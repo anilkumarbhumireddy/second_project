@@ -1,0 +1,9 @@
+<% if @robot.present? %>
+<h2>NAME: <%= @robot.name %> </h2>
+<h4>SLOGAN: <%= @robot.slogan %></h4>
+<%= button_to "All robots", robot_path, method: 'get' %>
+<%= button_to "Edit robots", edit_robot_path(@robot), method: 'get' %>
+<%= button_to "Remove Robot", robot_path(@robot), method:'delete' %>
+<% else %>
+	<p class="error"><%= @error%></p>
+<% end %>

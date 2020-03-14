@@ -1,0 +1,9 @@
+<% if @book.present? %>
+<h3>Book Name:<%= @book.book_name %> </h3>
+<h4> author: <%= @book.author %></h4>
+<%= button_to 'All books',book_path,method:'get' %>
+<%= button_to 'Edit books',edit_book_path(@book),method:'get' %>
+<%= button_to 'Remove books',book_path(@book),method:'delete' %>
+<% else %>
+<p class="error"><%= error %></p>
+<% end %>

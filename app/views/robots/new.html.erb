@@ -1,0 +1,6 @@
+<h3>create  a Robot</h3>
+<%= form_for @robot do |f| %>
+	<p>Enter's Robot name:<%=f.text_field:name,place_holder:"robot name" %></p>
+	<p>Enter's Favorite Phrase:<%=f.text_field:slogan,place_holder:"robot says.." %></p>
+	<%= f.submit %>
+<% end %>

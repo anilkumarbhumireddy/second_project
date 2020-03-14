@@ -1,0 +1,10 @@
+<ul>
+	<% @books.each do |book| %>
+	<li><%= link_to book.book_name , book_path(book) %></li>
+	<%=  button_to "Edit",edit_book_path(book), method: 'get' %>
+	<%=  button_to "Remove",book_path(book), method: 'delete',data:{conform:'are you sure'}%>
+	<% end %>
+
+
+</ul>
+<% link_to "new book",new_book_path %>
