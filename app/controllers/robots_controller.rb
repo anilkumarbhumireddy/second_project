@@ -9,7 +9,7 @@ class RobotsController < ApplicationController
 		if @robot.present?
 			@robot
 		else
-		 @error = 'record not present'
+			@error = 'record not present'
 		end
 
 	end
@@ -30,12 +30,12 @@ class RobotsController < ApplicationController
 	end
 
 	def update
-	
-		 if @robot.update(robot_params)
-            redirect_to(@robot)
-          else
-          	render :edit
-          end
+		
+		if @robot.update(robot_params)
+			redirect_to(@robot)
+		else
+			render :edit
+		end
 	end
 
 	def destroy
