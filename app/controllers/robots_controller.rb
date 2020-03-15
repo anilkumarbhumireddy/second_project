@@ -46,7 +46,9 @@ class RobotsController < ApplicationController
 		redirect_to robot_path
 	end
 
+
 	private
+
 
 	def robot_params
 		params.require(:robot).permit(:name,:slogan)
