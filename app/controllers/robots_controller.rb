@@ -5,14 +5,12 @@ class RobotsController < ApplicationController
 	end
 
 	def show 
-		
 		if @robot.present?
 			@robot
 		else
 			@error = 'record not present'
 		end
-
-	end
+  end
 
 	def new
 
