@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 	before_action:current_book,  only:[:edit ,:show , :update, :destroy]
-  
+
   def index
     @books = Book.all
   end
@@ -34,12 +34,12 @@ class BooksController < ApplicationController
   	 @book.destroy
   	redirect_to book_path
   end
+
   private
 
   def book_params
   	params.require(:book).permit(:book_name,:book_author)
   end
-
 
   def current_book
     @book = Book.find(params[:id])
